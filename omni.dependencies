@@ -1,0 +1,20 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "sirmordred/samsung-kernel-msm7x30",
+    "target_path": "kernel/samsung/msm7x30-common",
+    "revision":    "new_cm-11.0"
+  },
+  {
+    "remote":      "omnirom",
+    "repository":  "android_hardware_qcom_gps",
+    "target_path": "hardware/qcom/gps"
+    "revision":    "android-4.4"
+  },
+  {
+    "remote":      "github",
+    "repository":  "sirmordred/android_vendor_samsung_ancora",
+    "target_path": "vendor/samsung/ancora"
+    "revision":    "cm-11.0"
+  }
+]

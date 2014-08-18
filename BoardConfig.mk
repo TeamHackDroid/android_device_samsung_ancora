@@ -36,7 +36,6 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := scorpion
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_LOWMEM := true
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 TARGET_BOOTLOADER_BOARD_NAME := ancora
@@ -105,9 +104,6 @@ BOARD_EGL_CFG := device/samsung/ancora/config/egl.cfg
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
-# Touchscreen stuff
-BOARD_USE_LEGACY_TOUCHSCREEN := true
-
 # Camera stuff
 USE_CAMERA_STUB := true
 BOARD_USES_LEGACY_OVERLAY := true
@@ -154,7 +150,30 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/ancora/recovery/recover
 TARGET_RECOVERY_INITRC := device/samsung/ancora/config/init.recovery.rc
 TARGET_RECOVERY_FSTAB := device/samsung/ancora/config/fstab.qcom
 COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+PRODUCT_COPY_FILES += \
+    device/samsung/ancora/config/twrp.fstab:recovery/root/etc/twrp.fstab
 # End recovery stuff
+
+# TWRP recovery stuff
+BOARD_HAS_SDCARD_INTERNAL := true
+BOARD_USES_MMCUTILS := true
+BOARD_HAS_NO_MISC_PARTITION := true
+BOARD_HAS_NO_SELECT_BUTTON := true
+DEVICE_RESOLUTION := 480x800
+TW_TARGET_USES_QCOM_BSP := true
+TW_BRIGHTNESS_PATH := /sys/devices/platform/msm_fb.196609/leds/lcd-backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+TW_CUSTOM_POWER_BUTTON := 107
+BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
+TW_INTERNAL_STORAGE_PATH := "/sdcard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_EXTERNAL_STORAGE_PATH := "/external_sd"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+TW_INCLUDE_FB2PNG := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # Kernel stuff
 TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30-common

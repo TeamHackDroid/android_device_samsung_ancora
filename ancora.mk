@@ -18,8 +18,6 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_BOOT_JARS += qcmediaplayer
-
 # Boot and charging images
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ARIESVE.rle:root/ARIESVE.rle \
@@ -145,11 +143,8 @@ PRODUCT_PACKAGES += \
     libexifa \
     libjpega
 
-# qcmediaplayer
-PRODUCT_PACKAGES += qcmediaplayer
-
-# Torch
-PRODUCT_PACKAGES += Torch
+PRODUCT_PACKAGES += \
+    OmniTorch
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \

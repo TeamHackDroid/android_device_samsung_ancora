@@ -85,9 +85,6 @@
         <item>7</item>
     </integer-array>
 
-    <!-- Indicate whether the SD card is accessible without removing the battery. -->
-    <bool name="config_batterySdCardAccessibility">true</bool>
-
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
@@ -134,8 +131,8 @@
          kill the foreground app. -->
     <integer name="config_backKillTimeout">1500</integer>
 
-    <!-- Workaround for devices with broken keyboards -->
-    <bool name="config_forceDisableHardwareKeyboard">true</bool>
+    <!-- Indicate whether the SD card is accessible without removing the battery. -->
+    <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Boolean to enable stk functionality on Samsung phones -->
     <bool name="config_samsung_stk">true</bool>
@@ -152,6 +149,4 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">7</integer>
 
-    <!-- Device supports LED flashlight -->
-    <bool name="config_enableTorch">true</bool>
 </resources>

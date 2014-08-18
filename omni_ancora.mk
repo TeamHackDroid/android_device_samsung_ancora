@@ -1,16 +1,14 @@
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Omni stuff.
+$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit device configuration
 $(call inherit-product, $(LOCAL_PATH)/full_ancora.mk)
 
 PRODUCT_RELEASE_NAME := ancora
 
-#RELEASE_TYPE := EXPERIMENTAL
-#CM_EXTRAVERSION := alpha1
-
 # Setup device configuration
-PRODUCT_NAME := cm_ancora
+PRODUCT_NAME := omni_ancora
 PRODUCT_DEVICE := ancora
 PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := Samsung
