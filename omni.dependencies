@@ -3,7 +3,7 @@
     "remote":      "github",
     "repository":  "sirmordred/samsung-kernel-msm7x30",
     "target_path": "kernel/samsung/msm7x30-common",
-    "revision":    "new_cm-11.0"
+    "revision":    "omni"
   },
   {
     "remote":      "omnirom",
@@ -13,7 +13,7 @@
   },
   {
     "remote":      "github",
-    "repository":  "sirmordred/android_vendor_samsung_ancora",
+    "repository":  "arco/android_vendor_samsung_ancora",
     "target_path": "vendor/samsung/ancora"
     "revision":    "cm-11.0"
   }
