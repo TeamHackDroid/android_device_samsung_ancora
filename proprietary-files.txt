@@ -25,7 +25,6 @@
 /lib/egl/libq3dtools_adreno200.so
 
 /lib/hw/lights.msm7k.so
-/lib/hw/sensors.GT-I8150.so
 
 /lib/libActionShot.so
 /lib/libakm.so

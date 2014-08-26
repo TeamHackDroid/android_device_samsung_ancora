@@ -145,6 +145,9 @@ PRODUCT_PACKAGES += \
     libexifa \
     libjpega
 
+# sensors
+PRODUCT_PACKAGES += sensors.ancora
+
 # qcmediaplayer
 PRODUCT_PACKAGES += qcmediaplayer
 
