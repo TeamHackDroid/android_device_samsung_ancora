@@ -30,7 +30,6 @@
 /lib/libActionShot.so
 /lib/libakm.so
 /lib/libarccamera.so
-/lib/libaudioalsa.so
 /lib/libC2D2.so
 /lib/libcamera.so
 /lib/libcaps.so

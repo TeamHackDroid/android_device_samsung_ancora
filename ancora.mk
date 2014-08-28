@@ -116,7 +116,8 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudio-resampler \
     libaudioparameter \
-    libgenlock
+    libgenlock \
+    libaudioalsa
 
 PRODUCT_PACKAGES += \
     libmm-omxcore \
