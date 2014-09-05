@@ -148,8 +148,8 @@ PRODUCT_PACKAGES += \
 # qcmediaplayer
 PRODUCT_PACKAGES += qcmediaplayer
 
-# Torch
-PRODUCT_PACKAGES += Torch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:system/media/bootanimation.zip
 
 # For userdebug builds
 ADDITIONAL_DEFAULT_PROPERTIES += \
