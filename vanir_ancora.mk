@@ -13,9 +13,9 @@ $(call inherit-product, vendor/vanir/products/common_phones.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/ancora/full_ancora.mk)
 
-## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ancora
+# Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := vanir_ancora
+PRODUCT_DEVICE := ancora
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := GT-i8150
+PRODUCT_MODEL := GT-I8150
