@@ -8,7 +8,7 @@ on init
     export ANDROID_DATA /data
     export EXTERNAL_STORAGE /sdcard
     export SECONDARY_STORAGE /external_sd
-	export LD_LIBRARY_PATH .:/sbin    
+    export LD_LIBRARY_PATH .:/sbin    
 
     symlink /system/etc /etc
 
