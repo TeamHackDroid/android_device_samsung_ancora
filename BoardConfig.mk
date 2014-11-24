@@ -49,8 +49,7 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 # Kernel
 BOARD_KERNEL_BASE := 0x00400000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30-common
-TARGET_KERNEL_CONFIG := ancora_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/s2vep/kernel
 
 # Wifi related defines
 WIFI_BAND                        := 802_11_ABG
