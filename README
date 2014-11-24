@@ -6,15 +6,15 @@ To build an AOSP for Ancora, just follow these steps:
    repo init -u https://android.googlesource.com/platform/manifest -b android-5.0.0_r7
    
 2-Clone the repos of Ancora by Device, Kernel and Vendor.
-3-Revert change of BoardConfig.mk in device/samsung/ancora by
+3-Delete all lines from # Prebuilt kernel for AOSP source in device/samsung/ancora/ancora.mk
+4-Revert change of BoardConfig.mk in device/samsung/ancora by
       
       BOARD_KERNEL_BASE := 0x00400000
       BOARD_KERNEL_PAGESIZE := 4096
       TARGET_KERNEL_SOURCE := kernel/samsung/msm7x30-common
       TARGET_KERNEL_CONFIG := ancora_defconfig
 
-4-Save BoardConfig.mk and cd kernel/samsung/msm7x30-common
-5-Delete all lines from # Prebuilt kernel for AOSP source and save the file.
+5-Save BoardConfig.mk and cd kernel/samsung/msm7x30-common
 6-Run make ancora_defconfig.
 7-To make the kernel just type make-j3 .
 8-After finish building you can find the zImage in kernel/samsung/msm7x30-common/arch/arm/boot.
