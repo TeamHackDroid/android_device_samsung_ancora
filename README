@@ -14,16 +14,27 @@ To build an AOSP for Ancora, just follow these steps:
       TARGET_KERNEL_CONFIG := ancora_defconfig
 
 4-Save BoardConfig.mk and cd kernel/samsung/msm7x30-common
-5-Run make ancora_defconfig.
-6-To make the kernel just type make-j3 .
-7-After finish building you can find the zImage in kernel/samsung/msm7x30-common/arch/arm/boot.
-8-Take that file and type chmod 777 devuce/samsung/ancora then paste zImage and rename to kernel.
-9-Revert changes for BoardConfig.mk by removing all kernel lines and replace with:
+5-Delete all lines from # Prebuilt kernel for AOSP source and save the file.
+6-Run make ancora_defconfig.
+7-To make the kernel just type make-j3 .
+8-After finish building you can find the zImage in kernel/samsung/msm7x30-common/arch/arm/boot.
+9-Take that file and type chmod 777 devuce/samsung/ancora then paste zImage and rename to kernel.
+10-Revert changes for BoardConfig.mk by removing all kernel lines and replace with:
 
       # kernel
       TARGET_PREBUILT_KERNEL := device/samsung/ancora/kernel
 
-10-The only thing you have to do is building your AOSP Lollipop by the following command:
+11-Revert changes for ancora.mk in device/samsung/ancora by adding the following kernel lines:
+
+      # Prebuilt kernel for AOSP source
+      ifeq ($(TARGET_PREBUILT_KERNEL),)
+      LOCAL_KERNEL := device/samsung/ancora/kernel
+      else
+      LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+      endif
+
+
+11-The only thing you have to do is building your AOSP Lollipop by the following command:
 
       . build/envsetup.sh
       lunch aosp_ancora-userdebug
