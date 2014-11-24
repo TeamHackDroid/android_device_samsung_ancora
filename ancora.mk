@@ -160,7 +160,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Prebuilt kernel for AOSP source
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/samsung/s2vep/kernel
+LOCAL_KERNEL := device/samsung/ancora/kernel
 else
 LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
